@@ -1,0 +1,40 @@
+{
+  "name": "koa-socket.io",
+  "version": "1.0.0",
+  "description": "Koa meets socket.io connected socket",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LnsooXD/koa-socket.io.git"
+  },
+  "keywords": [
+    "koa",
+    "socket.io"
+  ],
+  "author": "LnsooXD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LnsooXD/koa-socket.io/issues"
+  },
+  "homepage": "https://github.com/LnsooXD/koa-socket.io#readme",
+  "engines": {
+    "node": ">= 4"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib"
+  ],
+  "dependencies": {
+    "co": "^4.6.0",
+    "debug": "^2.2.0",
+    "is-type-of": "^1.0.0",
+    "koa-compose": "^2.4.0",
+    "not-type-of": "^1.0.1",
+    "socket.io": "^1.4.8",
+    "thunkify": "^2.1.2"
+  }
+}
