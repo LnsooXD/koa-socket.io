@@ -8,7 +8,7 @@ koa-socket.io now requires **node v4.0.0** or higher although koa-socket simply 
 ## Installation
 
 ```sh
-npm i -S koa-socket
+npm i -S koa-socket.io
 ```
 
 ## Example
