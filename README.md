@@ -13,6 +13,15 @@ npm i -S koa-socket.io
 
 ## Example
 
+> There is a simple example/text project in *test* dir. You can launch it by run:
+```shell
+export NODE_ENV=development
+npm install
+npm test
+```
+
+> Some simple example code:
+
 ```js
 const Koa = require( 'koa' )
 const IO = require( 'koa-socket.io' )
@@ -34,8 +43,17 @@ var server = http.createServer(app.callback());
 
 io.start( server, options/*, port, host */ )
 
-io.on( 'join', function *() {
-  console.log( 'join event fired', this.data )
+io.on('join', function* () {
+    console.log('join event receiverd, new user: ', this.data)
+
+    // use global io send borad cast
+    io.emit('msg', '[All]: ' + this.data + ' joind'); 
+
+    // use current socket send a broadcast
+    this.socket.broadcast('msg', '[All]: Hello guys, I\'m ' + this.data + '.'); 
+    
+     // just send to current user
+    this.socket.emit('msg', '[' + this.data + ']' + " Welcome to koa-socket.io !");
 })
 
 server.listen( process.env.PORT || 3000 )
@@ -177,9 +195,12 @@ io.off()
 
 Sends a message to all connections.
 
-## Contributors
+## Author
 
 - [LnsooXD](https://github.com/LnsooXD)
+
+## Contributors
+
 - [digitalacorn](https://github.com/digitalacorn)
 
 ## License
