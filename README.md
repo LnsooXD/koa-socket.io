@@ -177,9 +177,10 @@ io.off()
 
 Sends a message to all connections.
 
-##Authors
+## Contributors
 
 - [LnsooXD](https://github.com/LnsooXD)
+- [digitalacorn](https://github.com/digitalacorn)
 
 ## License
 
