@@ -1,9 +1,18 @@
 # koa-socket.io
 
-> Sugar for connecting socket.io to a koa instance
+> Attaches socket.io to koa and allows koa-style middleware for sockets
 
-koa-socket.io now requires **node v4.0.0** or higher although koa-socket simply attaches to the server instance so will be compatible with a koa v1 powered app.
+Middleware for [Koa2](https://github.com/koajs/koa) to get/set session use with custom stores such as Redis or mongodb
 
+Use native ES6(async/await) by Nodejs v7.6, use `--harmony` option.
+
+Or you can use the old versions:
+- [babel](https://github.com/Secbone/koa-session2/tree/babel)
+- [node6](https://github.com/Secbone/koa-session2/tree/node6)
+
+koa-socket.io now requires **node v7.6.0** or higher although koa-socket.io simply attaches to the server instance so will be compatible with a koa v1 powered app. 
+
+If you need use koa-socket.io on lower version that requires **node v4.0.0** or higher, plase use [koa-socket.io v1.0.3](https://github.com/LnsooXD/koa-socket.io/tree/v1.0.3)
 
 ## Installation
 
@@ -13,11 +22,14 @@ npm i -S koa-socket.io
 
 ## Example
 
-> There is a simple example/text project in *test* dir. You can launch it by run:
+> There is a simple example/test project in *test* dir. You can launch it by run:
+> (The example code not in the published module, please fetch it at: [koa-socket.io@github](https://github.com/LnsooXD/koa-socket.io))
 ```shell
+git clone https://github.com/LnsooXD/koa-socket.io.git koa-socket.io
+cd koa-socket.io
 export NODE_ENV=development
 npm install
-npm test
+npm run example
 ```
 
 > Some simple example code:
@@ -149,7 +161,7 @@ io.start( server )
 server.listen( process.env.PORT )
 ```
 
-### .use( `Function callback` )
+### .use( `Function callback`| `Async Function callback` )
 
 Applies middleware to the stack.
 
@@ -168,7 +180,7 @@ io.use( function* (next ) {
 })
 ```
 
-### .on( `String event`, `Generator Function callback` )
+### .on( `String event`, `Function callback`| `Async Function callback` )
 
 ```js
 io.on( 'join', function *( next) => {
@@ -177,7 +189,7 @@ io.on( 'join', function *( next) => {
 })
 ```
 
-### .off( `String event`, `Generator Function callback` )
+### .off( `String event`, `Function callback`| `Async Function callback` )
 
 Removes a callback from an event.
 
@@ -201,6 +213,7 @@ Sends a message to all connections.
 
 ## Contributors
 
+- [LnsooXD](https://github.com/LnsooXD)
 - [digitalacorn](https://github.com/digitalacorn)
 
 ## License

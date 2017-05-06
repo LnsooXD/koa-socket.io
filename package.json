@@ -1,10 +1,10 @@
 {
   "name": "koa-socket.io",
-  "version": "1.0.3",
-  "description": "Koa meets socket.io connected socket",
+  "version": "1.1.0",
+  "description": "Attaches socket.io to koa and allows koa-style middleware for sockets",
   "main": "lib",
   "scripts": {
-    "test": "node test"
+    "example": "cd example && DEBUG=koa-socket.io:* node ."
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/LnsooXD/koa-socket.io#readme",
   "engines": {
-    "node": ">= 4"
+    "node": ">= 7.6"
   },
   "files": [
     "LICENSE",
@@ -29,16 +29,16 @@
     "lib"
   ],
   "dependencies": {
-    "co": "^4.6.0",
     "debug": "^2.6.6",
+    "depd": "^1.1.0",
     "is-type-of": "^1.0.0",
-    "koa-compose": "^2.5.1",
+    "koa-compose": "^4.0.0",
+    "koa-convert": "^1.2.0",
     "not-type-of": "^1.0.1",
-    "socket.io": "^1.7.3",
-    "thunkify": "^2.1.2"
+    "socket.io": "^1.7.3"
   },
   "devDependencies": {
     "koa": "^2.2.0",
-    "koa-static-server": "^1.0.0"
+    "koa-static": "^3.0.0"
   }
 }
