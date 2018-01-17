@@ -33,8 +33,9 @@ let numUsers = 0;
 
 // middleware
 io.use(async (ctx, next) => {
-    debug('middleware invoke: %s, %s', ctx.event, ctx.id);
+    debug('middleware invoke begin: %s, %s', ctx.event, ctx.id);
     await next();
+       debug('middleware invoke end: %s, %s', ctx.event, ctx.id);
 });
 
 // common function event handler
