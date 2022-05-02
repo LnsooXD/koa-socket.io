@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/LnsooXD/koa-socket.io#readme",
   "engines": {
-    "node": ">= 7.6"
+    "node": ">= 12.22.12"
   },
   "files": [
     "LICENSE",
