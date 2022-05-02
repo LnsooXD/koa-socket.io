@@ -1,6 +1,6 @@
 {
   "name": "koa-socket.io",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Attaches socket.io to koa and allows koa-style middleware for sockets",
   "main": "lib",
   "scripts": {
