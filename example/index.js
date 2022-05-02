@@ -6,7 +6,7 @@ const compose = require('koa-compose');
 
 const app = new Koa()
 const io = new IO({
-    namespace: '/'
+    namespace: '/chat-room'
 })
 
 app.use(require('koa-static')('./public'));

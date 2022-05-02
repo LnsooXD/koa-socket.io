@@ -4,7 +4,7 @@
   "description": "Attaches socket.io to koa and allows koa-style middleware for sockets",
   "main": "lib",
   "scripts": {
-    "example": "cd example && DEBUG=koa-socket.io:* node ."
+    "example": "cd example && DEBUG=koa-socket.io:* node index.js"
   },
   "repository": {
     "type": "git",
@@ -29,15 +29,15 @@
     "lib"
   ],
   "dependencies": {
-    "debug": "3.1.0",
-    "is-type-of": "1.2.0",
-    "koa-compose": "4.0.0",
-    "koa-convert": "1.2.0",
-    "not-type-of": "1.0.1",
-    "socket.io": "2.0.4"
+    "debug": "^4.3.2",
+    "is-type-of": "^1.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-convert": "^2.0.0",
+    "not-type-of": "^1.0.1",
+    "socket.io": "^4.1.2"
   },
   "devDependencies": {
-    "koa": "^2.4.1",
-    "koa-static": "^4.0.2"
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0"
   }
 }
